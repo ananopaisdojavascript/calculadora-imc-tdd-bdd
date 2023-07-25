@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1690244603472" clover="3.2.0">
+  <project timestamp="1690244603472" name="All files">
+    <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1" elements="12" coveredelements="12" complexity="0" loc="7" ncloc="7" packages="1" files="2" classes="2"/>
+    <file name="imc.js" path="/Users/anapaulalopesaraujo/Documents/github/calculadora-imc-tdd-bdd/src/js/imc.js">
+      <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+    </file>
+    <file name="utils.js" path="/Users/anapaulalopesaraujo/Documents/github/calculadora-imc-tdd-bdd/src/js/utils.js">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
