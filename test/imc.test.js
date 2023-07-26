@@ -1,5 +1,5 @@
 const bmi = require('../src/js/imc')
-const { error } = require('../src/js/utils')
+const { constants, bmiMessages } = require('../src/js/utils')
 
 describe('calculate the BMI', () => {
     it('should return a function', () => {
@@ -10,7 +10,7 @@ describe('calculate the BMI', () => {
         try {
             bmi()
         } catch ({ message }) {
-            expect(message).toEqual(error.VALUE_ERROR_MESSAGE)
+            expect(message).toEqual(constants.error.VALUE_ERROR_MESSAGE)
         }
     })
 
@@ -19,7 +19,7 @@ describe('calculate the BMI', () => {
         try {
             bmi(weight)
         } catch ({ message }) {
-            expect(message).toEqual(error.VALUE_ERROR_MESSAGE)
+            expect(message).toEqual(constants.error.VALUE_ERROR_MESSAGE)
         }
     })
 
@@ -29,7 +29,55 @@ describe('calculate the BMI', () => {
         try {
             bmi(height, weight)
         } catch ({ message }) {
-            expect(message).toEqual(error.VALUE_ERROR_MESSAGE)
+            expect(message).toEqual(constants.error.VALUE_ERROR_MESSAGE)
         }
+    })
+
+    it(`should return the message "${bmiMessages.status.UNDERWEIGHT_MESSAGE}"`, () => {
+        const weight = 40
+        const height = 1.65
+        const result = bmiMessages.status.UNDERWEIGHT_MESSAGE
+        const op = bmi(weight, height)
+        expect(op).toEqual(result)
+    })
+
+    it(`should return the message "${bmiMessages.status.IDEAL_WEIGHT_MESSAGE}"`, () => {
+        const weight = 60
+        const height = 1.60
+        const result = bmiMessages.status.IDEAL_WEIGHT_MESSAGE
+        const op = bmi(weight, height)
+        expect(op).toEqual(result)
+    })
+
+    it(`should return the message "${bmiMessages.status.OVERWEIGHT_MESSAGE}"`, () => {
+        const weight = 90
+        const height = 1.80
+        const result = bmiMessages.status.OVERWEIGHT_MESSAGE
+        const op = bmi(weight, height)
+        expect(op).toEqual(result)
+    })
+
+    it(`should return the message "${bmiMessages.status.OBESITY_MESSAGE}"`, () => {
+        const weight = 100
+        const height = 1.80
+        const result = bmiMessages.status.OBESITY_MESSAGE
+        const op = bmi(weight, height)
+        expect(op).toEqual(result)
+    })
+
+    it(`should return the message "${bmiMessages.status.SEVERE_OBESITY_MESSAGE}"`, () => {
+        const weight = 70
+        const height = 1.40
+        const result = bmiMessages.status.SEVERE_OBESITY_MESSAGE
+        const op = bmi(weight, height)
+        expect(op).toEqual(result)
+    })
+
+    it(`should return the message "${bmiMessages.status.MORBID_OBESITY_MESSAGE}"`, () => {
+        const weight = 100
+        const height = 1.40
+        const result = bmiMessages.status.MORBID_OBESITY_MESSAGE
+        const op = bmi(weight, height)
+        expect(op).toEqual(result)
     })
 })
