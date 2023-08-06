@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ananopaisdojavascript/calculadora-imc-tdd-bdd.git"
   },
-  "keywords": [],
+  "keywords": [
+    "cypress"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -18,8 +20,10 @@
   },
   "homepage": "https://github.com/ananopaisdojavascript/calculadora-imc-tdd-bdd#readme",
   "devDependencies": {
-    "cypress": "^12.17.2",
-    "cypress-cucumber-preprocessor": "^4.3.1",
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "cypress": "^12.17.3",
     "jest": "^29.6.2"
   }
 }

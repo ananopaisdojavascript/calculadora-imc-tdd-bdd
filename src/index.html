@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calculadora de IMC</title>
+    <script src="./js/imc.js"></script>
+    <script src="./js/index.js" type="module"></script>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="user info-box">
+          <div class="img-box">
+            <img
+              src="../assets/nadine-primeau--ftWfohtjNw-unsplash.jpeg"
+              alt="bowl of salad"
+              data-test="bmi-image"
+            />
+          </div>
+          <div class="box">
+            <form id="bmi-button" data-test="bmi-form">
+              <h1 data-test="bmi-title">Calculadora de IMC</h1>
+              <label for="weight" class="bmi-text">Digite o peso (em kg)</label>
+              <input
+                type="number"
+                name="weight"
+                step="0.01"
+                data-test="bmi-weight"
+                required
+              />
+              <label for="height" class="bmi-text">Digite a altura (em m)</label>
+              <input
+                type="number"
+                name="height"
+                step="0.01"
+                data-test="bmi-height"
+                required
+              />
+              <button type="submit" data-test="bmi-button">Calcular IMC</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="user bmi-box">
+          <div class="box">
+            <div class="result">
+              <h1 data-test="bmi-result-main">Resultado</h1>
+              <p class="bmi-text" data-test="bmi-result-text">Seu Índice de Massa Corporal</p>
+              <p class="bmi-result" data-test="bmi-result"></p>
+              <p class="bmi-text" data-test="bmi-result-status-text">Sua Classificação</p>
+              <p class="bmi-result" data-test="bmi-result-status"></p>
+              <button data-test="bmi-result-button-back">Voltar</button>
+            </div>
+          </div>
+          <div class="img-box">
+            <img
+              src="../assets/eiliv-aceron-ZuIDLSz3XLg-unsplash.jpeg"
+              alt="A bowl of salad"
+              data-test="bmi-result-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="./js/index.js"></script>
+    <script src="./js/imc.js"></script>
+  </body>
+</html>
